@@ -39,7 +39,7 @@ export default function Main()
             </table>
             <footer>
                 <p>Система выбора кандидатов</p>
-                <button>1</button>
+                <button onClick={async()=>console.log(fetch("http://192.168.4.44:8080/auth/registration",{method: "POST", body:{name: "plaeholder", yearOfBirth: 2323, password:"pas"}}))}>1</button>
                 <button>2</button>
                 <button>3</button>
                 <button>...</button>
