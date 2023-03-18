@@ -1,15 +1,9 @@
-import { BrowserRouter, Routes } from 'react-router-dom';
-import logo from './logo.svg';
+
+import Main from './container/Main'
 import './style/sass.css';
-
-
 function App() {
   return (
-    <BrowserRouter>
-    <Routes>
-      
-    </Routes>
-    </BrowserRouter>
+    <Main />
   );
 }
 
