@@ -23,7 +23,7 @@ export default function Main()
             <table>
                 <thead>
                     <td><input type = "checkbox" onChange = {()=>{
-                        setSelected([...new Array(1)].map(()=>!all));
+                        setSelected([...new Array(5)].map(()=>!all));
                         selectAll(!all);
                     }}/></td>
                     <td>ФИО</td>
