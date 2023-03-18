@@ -1,1 +1,1 @@
-{"version":3,"sources":["../sass/sass.sass","sass.css"],"names":[],"mappings":"AAAA;EACI,gBAAA;ACCJ","file":"sass.css"}
+{"version":3,"sources":["../sass/_main.sass","sass.css","../sass/_registration.sass"],"names":[],"mappings":"AAAA;EACI,eAAA;ACCJ;;ACFA;EACI,aAAA;EACA,sBAAA;ADKJ;ACJI;EACI,gBAAA;ADMR","file":"sass.css"}

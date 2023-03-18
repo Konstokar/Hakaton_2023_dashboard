@@ -1,3 +1,11 @@
-.app {
-  background: grey;
+html {
+  font-size: 16px;
+}
+
+.reg {
+  display: flex;
+  flex-direction: column;
+}
+.reg > * {
+  margin-top: 1rem;
 }/*# sourceMappingURL=sass.css.map */
