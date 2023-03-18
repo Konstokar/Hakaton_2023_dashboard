@@ -9,7 +9,7 @@ export default function Main()
         <td><input type = "checkbox" checked = {selection} onChange = {()=>setSelected(
             selected.map((item, index)=>(i === index) ? !item: item)
         )}/></td>
-        <td>Иванова Мария Ивановна {selected[i] && <button>В избранное</button>}</td>
+        <td>Иванова Мария Ивановна {selection && <button>В избранное</button>}</td>
         <td>СГТУ имени Гагарина Ю.А.</td>
         <td>5</td>
         <td>24</td>
@@ -39,7 +39,7 @@ export default function Main()
             </table>
             <footer>
                 <p>Система выбора кандидатов</p>
-                <button onClick={async()=>console.log(fetch("http://192.168.4.44:8080/auth/registration",{method: "POST", body:{name: "plaeholder", yearOfBirth: 2323, password:"pas"}}))}>1</button>
+                <button onClick={async()=>console.log(await (await fetch("http://localhost:3000/people")).text())}>1</button>
                 <button>2</button>
                 <button>3</button>
                 <button>...</button>
