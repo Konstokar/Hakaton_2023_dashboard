@@ -3,13 +3,14 @@ export default function registration(){
     <form method="POST" action="#" className="reg">
     <label>
         Имя пользователя
-        <input type="text" name="login"/>
+        <input type="text" name="username"/>
     </label>
     <label>
         Пароль
         <input type="password" name="password"/>
     </label>
-    <input type="submit"/>
+    <input type="submit" value="Зарегистрироваться"/>
+   
     </form>
     </>)
 }
