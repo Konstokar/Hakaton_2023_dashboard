@@ -1,18 +1,22 @@
 import star from '../resourses/Star 1.svg'
 import plus from '../resourses/Add.svg'
 import { useState } from 'react';
-export default function DAD({element, drag,setElement }){
-    return (<div className="drop"  onDragEnter={()=>{
+export default function DAD({ drag,text,f=null}){
+    const [cls, setCls]=useState({})
+    return (<div className='drop' style={{cls}} onDragEnter={()=>{
+        setCls({
+            opacity: 0.7}
+            )
         
-        const y=element
-        delete y[drag.target.getAttribute('data-key')]
-        const l=drag.target.getAttribute('data-key');
+        const l=f==null?drag.target.getAttribute('data-key'):'s'+drag.target.getAttribute('data-key');
+        console.log(l)
         sessionStorage.setItem([l],JSON.stringify({[l]:drag.target.outerHTML}))
-        setElement(y)
-    }}> 
+       
+    }} onDragLeave={()=>{setCls('')}
+        }> 
         <img className="star" draggable="false" src={star }alt="" />
-        <p className="mean">Избранное</p>
+        <p className="mean" >{text}</p>
         <img className="plus" draggable="false" src={plus }alt="" />
-        <p className="drag">Перетяните сюда, чтобы добавить в избранное</p>
+        <p className="drag">Перетяните сюда, чтобы добавить в {text}</p>
     </div>)
 }

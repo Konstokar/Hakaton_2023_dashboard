@@ -8,7 +8,7 @@ export default function Menu(){
             <Link to="/app/rating"  >Рейтинг</Link>
         </nav>
         <div className="pc">
-            <Link to="/login"  relative="path">Личный кабинет</Link>
+            <Link to="/app/profile"  relative="path">Личный кабинет</Link>
         </div>
     </div>)
 }

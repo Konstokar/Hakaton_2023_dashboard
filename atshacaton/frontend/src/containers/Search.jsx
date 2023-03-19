@@ -35,7 +35,7 @@ function Search() {
             {element}
         </div>
         <div className='cont'>
-            <DAD element={element} drag={drag} setElement={setElement}/>
+            <DAD  drag={drag}  text="Избранное"/>
         </div>
     </div></>)
 

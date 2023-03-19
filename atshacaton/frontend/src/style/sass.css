@@ -155,9 +155,11 @@ body {
 .searchBody {
   display: flex;
   flex-direction: row;
+  position: relative;
   padding: 0 1.25rem;
 }
 .searchBody .table {
+  position: relative;
   width: 60%;
 }
 @media (min-width: 1024px) {
@@ -177,6 +179,11 @@ body {
   align-items: center;
   font-size: 1.4063rem;
 }
+.searchBody .table .string .del {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-left: 7rem;
+}
 .searchBody .table .string > * {
   margin-left: 2.5rem;
   height: -moz-min-content;
@@ -185,10 +192,36 @@ body {
 .searchBody .table .string .Y {
   margin-left: 5rem;
 }
-.searchBody .table .string:nth-child(odd) {
+.searchBody .table > *:nth-child(odd) {
   background: #EBDCFA;
 }
 .searchBody .cont {
   position: relative;
   width: 50%;
+}
+
+.profile {
+  color: #9747FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile .title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.4375rem;
+  text-align: center;
+}
+.profile .profileForm {
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+}
+.profile .profileForm input {
+  border: 1px solid #EBDCFA;
+  border-radius: 10px;
+  padding: 0.3125rem 0.625rem;
+}
+.profile .profileForm input:focus {
+  outline: 1px solid #9747FF;
 }/*# sourceMappingURL=sass.css.map */
