@@ -8,4 +8,24 @@ html {
 }
 .reg > * {
   margin-top: 1rem;
+}
+
+.menu {
+  display: flex;
+  flex-direction: row;
+}
+.menu nav {
+  width: -moz-min-content;
+  width: min-content;
+}
+.menu pc {
+  margin-right: 0;
+}
+
+.searchBody {
+  display: flex;
+  flex-direction: row;
+}
+.searchBody .kk {
+  margin-left: 50px;
 }/*# sourceMappingURL=sass.css.map */
