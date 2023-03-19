@@ -1,67 +1,46 @@
 import Menu from './Menulayout'
 import  $ from 'jquery'
+import ava from '../resourses/Avatar_Applicant.svg'
+import DAD from './DAD.jsx'
+import Sort from './Sort'
 import { useState } from 'react';
 
 function Search() {
 
-    const [count,sCount]=useState(0)
-    const [flag,setFlag]=useState(false)
-    const [visible,setVisible]=useState({display: 'none'})
+    
     const [drag,setDrag]=useState(null)
-    const [element,setElement]=useState(elems(5));
+    const [element,setElement]=useState(elems(20));
     function elems(c){
         let arr=[];
         
         for(let i=0;i<c;i++){
-            arr.push(<div draggable="true" data-key={i+1} onDragStart={(e)=>{
+            arr.push(<div className="string" draggable="true" data-key={i+1} onDragStart={(e)=>{
                 setDrag(e);
-                
-                setVisible({display: 'block'})}} 
-                onDragEnd={()=>{setVisible({display: 'none'})}
+            }} 
+                onDragEnd={()=>{}
             }
-                key={i+1}>{i}
+                key={i+1}>
+                    <img  draggable="false" src={ava} alt="" />
+                    <p>ИМЯ ФАМИЛИЯ ОТЧЕСТВО</p>
+                    <p className="R">14</p>
+                    <p className="Y">Есть</p>
                 </div>)
         }
         return arr
     }
-    return (
+    return (<>
+        <Sort />
     <div className='searchBody'>
-        <div className="mmm">
+        <div className="table">
             {element}
         </div>
-        <div className="kk" style={visible} onDragEnter={()=>{
-                sCount(count+1);
-                const y=element
-                delete y[drag.target.getAttribute('data-key')]
-                const l=drag.target.getAttribute('data-key');
-           
-                sessionStorage.setItem([l],JSON.stringify({[l]:drag.target.outerHTML}))
-                setElement(y)
-              
-            
-
-        }}>{count}</div>
-    </div>)
+        <div className='cont'>
+            <DAD element={element} drag={drag} setElement={setElement}/>
+        </div>
+    </div></>)
 
 }
 export default Search;
 
 
 
-/*import { useDrag } from 'react-dnd'
- 
-export default function Search()  {
-    const [{ isDragging }, dragRef] = useDrag({
-        type: 'pet',
-        item: { id, name },
-        collect: (monitor) => ({
-            isDragging: monitor.isDragging()
-        })
-    })
-    return (
-        <div className='pet-card' ref={dragRef}>
-            {name}
-            {isDragging && 'Oops'}
-        </div>
-    )
-}*/

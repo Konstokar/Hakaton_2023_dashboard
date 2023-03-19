@@ -1,6 +1,7 @@
 
 
 function Favourites(){
+    
     let elems=[]
     let newelems=[];
     for(let session in sessionStorage){
@@ -12,6 +13,9 @@ function Favourites(){
             newelems.push(<div dangerouslySetInnerHTML={{__html:JSON.parse(i)[t]}}></div>)
            }  
     }
-    return <div>{newelems}</div>
+    return  <div className='searchBody'>
+    <div className="table">
+        {newelems}
+    </div></div>
     }
     export default Favourites;

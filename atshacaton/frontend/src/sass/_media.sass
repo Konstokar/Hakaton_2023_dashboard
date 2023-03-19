@@ -1,0 +1,16 @@
+@mixin media($screen)
+    @if $screen==1920
+        @media (min-width: 1920px)
+            @content
+    @if $screen==1440
+        @media (min-width: 1440px)
+            @content
+    @if $screen==1024
+        @media (min-width: 1024px)
+            @content
+    @if $screen==768
+        @media (min-width: 768px)
+            @content
+    
+
+    
