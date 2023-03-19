@@ -1,5 +1,37 @@
 .searchBody
     display: flex
     flex-direction: row
-    & .kk
-        margin-left: 50px
+    position: relative
+    padding: 0 1.25rem
+    & .table
+        position: relative
+        width:60%
+        @include media(1024)
+            width: 80%
+        @include media(768)
+            width: 90%
+        & .string
+            & .del
+                font-size: 1.25rem
+                font-weight: 600
+                margin-left: 7rem
+            display: flex
+            position: relative
+            flex-direction: row
+            align-items: center
+            font-size: 1.4063rem
+            &>*
+                margin-left: 2.5rem
+                height: min-content
+            & .Y
+                margin-left: 5rem
+        &>*:nth-child(odd)
+            background: $color-light-violet
+            
+                
+                
+    & .cont
+        position: relative
+        width: 50%
+    
+    
