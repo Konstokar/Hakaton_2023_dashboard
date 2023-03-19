@@ -1,16 +1,25 @@
-export default function registration(){
-    return(<>
+export default function Registration(){
+    return(<div className="bg">
+    <p className="regtitle">Регистрация</p>
     <form method="POST" action="#" className="reg">
     <label>
-        Имя пользователя
-        <input type="text" name="username"/>
+        <p>Имя пользователя:</p>
+        <input type="text" required name="username"/>
     </label>
     <label>
-        Пароль
-        <input type="password" name="password"/>
+        <p>Телефон:</p>
+        <input type="phone"required  name="phone"/>
     </label>
-    <input type="submit" value="Зарегистрироваться"/>
+    <label>
+        <p>Почта:</p>
+        <input type="email"required  name="email"/>
+    </label>
+    <label>
+        <p>Пароль:</p>
+        <input type="password"required  name="password"/>
+    </label>
+    <input type="submit"  className="submit" value="Зарегистрироваться"/>
    
     </form>
-    </>)
+    </div>)
 }

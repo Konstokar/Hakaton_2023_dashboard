@@ -1,5 +1,25 @@
+.regtitle
+    text-align: center
+    color: $color-violet
+    font-size: 2rem
+
 .reg
     display: flex
+    width: min-content
+    margin: auto
+    color: $color-violet
     flex-direction: column
+    
+    & .submit
+        width: 20rem
+        background: $color-light-violet
+        
+    & input
+        width: 100%
+        border: 1px solid $color-light-violet
+        border-radius: 10px
+        padding: .3125rem .625rem
+        &:focus
+            outline: 1px solid $color-violet
     &>*
         margin-top: 1rem

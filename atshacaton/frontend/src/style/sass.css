@@ -25,9 +25,32 @@ body {
   margin: 0;
 }
 
+.regtitle {
+  text-align: center;
+  color: #9747FF;
+  font-size: 2rem;
+}
+
 .reg {
   display: flex;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+  color: #9747FF;
   flex-direction: column;
+}
+.reg .submit {
+  width: 20rem;
+  background: #EBDCFA;
+}
+.reg input {
+  width: 100%;
+  border: 1px solid #EBDCFA;
+  border-radius: 10px;
+  padding: 0.3125rem 0.625rem;
+}
+.reg input:focus {
+  outline: 1px solid #9747FF;
 }
 .reg > * {
   margin-top: 1rem;
@@ -224,4 +247,18 @@ body {
 }
 .profile .profileForm input:focus {
   outline: 1px solid #9747FF;
+}
+
+.ratingBody {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.ratingBody .cont {
+  position: relative;
+  width: 50%;
+}
+.ratingBody .cont .drop {
+  width: 40%;
+  right: 1.25rem;
 }/*# sourceMappingURL=sass.css.map */
