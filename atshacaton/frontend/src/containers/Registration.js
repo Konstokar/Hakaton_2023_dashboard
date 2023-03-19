@@ -1,6 +1,6 @@
 export default function registration(){
     return(<>
-    <form method="POST" action="http://localhost:8080/auth/registration" className="reg" id = 'rform'>
+    <form method="POST" action="http://localhost:3000/auth/registration" className="reg" id = 'rform'>
     <label>
         Имя пользователя <br/>
         <input type="text" name="username" required/>
@@ -18,15 +18,18 @@ export default function registration(){
         <input type="text" name="phoneNumber" required/>
     </label>
     <input type="button" value="Зарегистрироваться" onClick={(e)=>{
+        let body = {};
+        for(let item of e.target.parentElement.getElementsByTagName('input'))
+            if(item.type != 'button')
+                body[item.name] = item.value;
         fetch(e.target.parentElement.action,
         {method: 'POST', 
         headers: {'Accept': 'application/json',
                 'Content-Type': 'application/json'
                 },
-        body: new FormData(e.target.parentElement)
+        body: JSON.stringify(body)
         }
-        
-    )
+        )
     }}/>
    
     </form>
