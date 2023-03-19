@@ -1,3 +1,4 @@
+import Dad2 from './DAD2'
 function Rating(){
     let elems=[];
     let newelems=[];
@@ -9,15 +10,16 @@ function Rating(){
            
             for(const t in JSON.parse(i)){
                 if(t[0]=='s'){
-                    console.log(i)
                     const buf=JSON.parse(i)[t]
        
-                newelems.push(<div dangerouslySetInnerHTML={{__html:buf}}></div>)
+                newelems.push(<div  key={t} dangerouslySetInnerHTML={{__html:buf}}></div>)
                 }
                 
                 
            }  
     }}
-    return (<>{newelems}</>)
+    return (<div>{newelems}</div>
+
+    )
 }
 export default Rating;

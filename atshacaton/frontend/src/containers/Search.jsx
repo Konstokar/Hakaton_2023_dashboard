@@ -22,7 +22,7 @@ function Search() {
                 key={i+1}>
                     <img  draggable="false" src={ava} alt="" />
                     <p>ИМЯ ФАМИЛИЯ ОТЧЕСТВО</p>
-                    <p className="R">14</p>
+                    <p className="R">{i}</p>
                     <p className="Y">Есть</p>
                 </div>)
         }

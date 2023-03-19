@@ -5,12 +5,11 @@ export default function DAD({ drag,text,f=null}){
     const [cls, setCls]=useState({})
     return (<div className='drop' style={{cls}} onDragEnter={()=>{
         setCls({
-            opacity: 0.7}
-            )
-        
+        opacity: 0.7}
+        )
+      
         const l=f==null?drag.target.getAttribute('data-key'):'s'+drag.target.getAttribute('data-key');
-        console.log(l)
-        sessionStorage.setItem([l],JSON.stringify({[l]:drag.target.outerHTML}))
+        sessionStorage.setItem([l],JSON.stringify({[l]:(drag.target.outerHTML)}))
        
     }} onDragLeave={()=>{setCls('')}
         }> 

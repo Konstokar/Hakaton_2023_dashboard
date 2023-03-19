@@ -1,5 +1,4 @@
 
-import { useStore } from 'react-redux';
 import DAD from './DAD.jsx'
 import { useState } from 'react';
 function Favourites(){
@@ -13,10 +12,10 @@ function Favourites(){
         if (i!=null){
             
             for(const t in JSON.parse(i)){
-                if(i[0]!='f'){
-                    const btn="<div class='del' >X</div>"
-                const buf=JSON.parse(i)[t].slice(0,-6)+btn+JSON.parse(i)[t].slice(-6)
-                newelems.push(<div onDragStart={(e)=>{sD(e)}} dangerouslySetInnerHTML={{__html:buf}}></div>)
+                if(t[0]!='s'){
+                    const buf=JSON.parse(i)[t]
+            
+                newelems.push(<div key={t} onDragStart={(e)=>{sD(e)}} dangerouslySetInnerHTML={{__html:buf}}></div>)
                 }
                 
                 
