@@ -3,6 +3,7 @@ import  $ from 'jquery'
 import ava from '../resourses/Avatar_Applicant.svg'
 import DAD from './DAD.jsx'
 import Sort from './Sort'
+
 import { useState } from 'react';
 
 function Search() {
@@ -14,12 +15,14 @@ function Search() {
         let arr=[];
         
         for(let i=0;i<c;i++){
-            arr.push(<div className="string" draggable="true" data-key={i+1} onDragStart={(e)=>{
+            arr.push(<div className="string" key={i+1} draggable="true" onDragStart={(e)=>{    
                 setDrag(e);
+                console.log(e,element)
             }} 
-                onDragEnd={()=>{}
+                onDragEnd={(e)=>{
             }
-                key={i+1}>
+            }
+                >
                     <img  draggable="false" src={ava} alt="" />
                     <p>ИМЯ ФАМИЛИЯ ОТЧЕСТВО</p>
                     <p className="R">{i}</p>

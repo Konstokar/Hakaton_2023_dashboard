@@ -1,10 +1,12 @@
 
 import DAD from './DAD.jsx'
+import Sort from './Sort'
 import { useState } from 'react';
 function Favourites(){
     const [d,sD]=useState('');
     let elems=[]
     let newelems=[];
+    const [ne,sNe]=useState([])
     for(let session in sessionStorage){
         elems.push(sessionStorage.getItem([session])) 
     }
@@ -21,8 +23,11 @@ function Favourites(){
                 
            }  
     }}
-  
-    return  <div className='searchBody'>
+   
+    return <>
+    <Sort />
+     <div className='searchBody'>
+        
     <div className="table">
         {newelems}
     </div>
@@ -30,6 +35,6 @@ function Favourites(){
     <DAD  drag={d} text="Рейтинг" f="true"/>
     </div>
     
-    </div>
+    </div></>
     }
     export default Favourites;
