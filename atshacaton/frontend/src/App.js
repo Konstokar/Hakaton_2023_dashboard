@@ -22,7 +22,7 @@ function App() {
           <Route path="profile" element={<Profile />}/>
           <Route path="search" element={<Search />}/>
           <Route path="favorites" element={<Favorites />}/>
-          <Route path="rating" elements={<Rating />}/>
+          <Route path="rating" element={<Rating />}/>
             
         
         </Route>

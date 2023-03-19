@@ -16,19 +16,19 @@ function Favourites(){
                 if(i[0]!='f'){
                     const btn="<div class='del' >X</div>"
                 const buf=JSON.parse(i)[t].slice(0,-6)+btn+JSON.parse(i)[t].slice(-6)
-                newelems.push(<div dangerouslySetInnerHTML={{__html:buf}}></div>)
+                newelems.push(<div onDragStart={(e)=>{sD(e)}} dangerouslySetInnerHTML={{__html:buf}}></div>)
                 }
                 
                 
            }  
     }}
-    console.log(newelems)
+  
     return  <div className='searchBody'>
     <div className="table">
         {newelems}
     </div>
     <div className="cont">
-    <DAD  text="Рейтинг" s="true"/>
+    <DAD  drag={d} text="Рейтинг" f="true"/>
     </div>
     
     </div>
