@@ -1,0 +1,28 @@
+.menu
+    display: flex
+    background: $color-violet
+    padding: 1.875rem 70px
+    flex-direction: row
+    & a
+        color: black
+        font-size: 2rem
+        font-weight: 600
+        text-decoration: none
+        &:hover
+            color: white
+    & nav
+        
+        display: flex
+        justify-content: space-around
+        @include media(768)
+            width: 60%
+        @include media(1440)
+            width: 40%
+    & .pc
+        margin-right: 0
+        margin-left: auto
+        display: flex
+        & .avatar
+            width: 2.8125rem
+            height: 2.8125rem
+        

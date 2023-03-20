@@ -1,0 +1,264 @@
+* {
+  box-sizing: border-box;
+}
+
+html {
+  font-family: sans-serif;
+}
+@media (min-width: 768px) {
+  html {
+    font-size: 10px;
+  }
+}
+@media (min-width: 1024px) {
+  html {
+    font-size: 14px;
+  }
+}
+@media (min-width: 1920px) {
+  html {
+    font-size: 16px;
+  }
+}
+
+body {
+  margin: 0;
+}
+
+.regtitle {
+  text-align: center;
+  color: #9747FF;
+  font-size: 2rem;
+}
+
+.reg {
+  display: flex;
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+  color: #9747FF;
+  flex-direction: column;
+}
+.reg .submit {
+  width: 20rem;
+  background: #EBDCFA;
+}
+.reg input {
+  width: 100%;
+  border: 1px solid #EBDCFA;
+  border-radius: 10px;
+  padding: 0.3125rem 0.625rem;
+}
+.reg input:focus {
+  outline: 1px solid #9747FF;
+}
+.reg > * {
+  margin-top: 1rem;
+}
+
+.drop {
+  display: flex;
+  position: fixed;
+  flex-direction: column;
+  align-content: center;
+  justify-items: center;
+  flex-wrap: wrap;
+  height: -moz-min-content;
+  height: min-content;
+  background: linear-gradient(215.89deg, #D6D6D6 4.52%, rgba(214, 214, 214, 0) 94.57%);
+  border-radius: 34.5px;
+  font-size: 2.7813rem;
+}
+@media (min-width: 1440px) {
+  .drop {
+    width: 40%;
+    padding: 6rem 5rem;
+    margin-top: 1rem;
+    margin-left: 2.5rem;
+  }
+}
+@media (min-width: 1024px) {
+  .drop {
+    width: 30%;
+    padding: 4rem 5rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+}
+@media (min-width: 768px) {
+  .drop {
+    font-size: 2rem;
+    width: 30%;
+    padding: 5rem 5rem;
+    margin-top: 1rem;
+    margin-left: 2rem;
+  }
+}
+.drop .mean {
+  font-weight: 400;
+  text-align: center;
+}
+.drop .drag {
+  text-align: center;
+  font-weight: 300;
+}
+.drop .plus {
+  margin: auto;
+  width: 6.9375rem;
+  height: 6.9375rem;
+}
+
+.menu {
+  display: flex;
+  background: #9747FF;
+  padding: 1.875rem 70px;
+  flex-direction: row;
+}
+.menu a {
+  color: black;
+  font-size: 2rem;
+  font-weight: 600;
+  text-decoration: none;
+}
+.menu a:hover {
+  color: white;
+}
+.menu nav {
+  display: flex;
+  justify-content: space-around;
+}
+@media (min-width: 768px) {
+  .menu nav {
+    width: 60%;
+  }
+}
+@media (min-width: 1440px) {
+  .menu nav {
+    width: 40%;
+  }
+}
+.menu .pc {
+  margin-right: 0;
+  margin-left: auto;
+  display: flex;
+}
+.menu .pc .avatar {
+  width: 2.8125rem;
+  height: 2.8125rem;
+}
+
+.sort {
+  width: 100%;
+  background: #131213;
+}
+.sort .sortbody {
+  color: white;
+  display: flex;
+  width: 70%;
+}
+.sort .sortbody .s1 {
+  margin-left: 19rem;
+}
+.sort .sortbody .s2 {
+  margin-left: 8rem;
+}
+.sort .sortbody .s3 {
+  margin-left: 2rem;
+}
+.sort .sortbody > * {
+  display: flex;
+}
+.sort .sortbody > * p {
+  margin-left: 0.5rem;
+}
+.sort .sortbody > * img {
+  width: 2rem;
+}
+
+.searchBody {
+  display: flex;
+  flex-direction: row;
+  position: relative;
+  padding: 0 1.25rem;
+}
+.searchBody .table {
+  position: relative;
+  width: 60%;
+}
+@media (min-width: 1024px) {
+  .searchBody .table {
+    width: 80%;
+  }
+}
+@media (min-width: 768px) {
+  .searchBody .table {
+    width: 90%;
+  }
+}
+.searchBody .table .string {
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.4063rem;
+}
+.searchBody .table .string .del {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-left: 7rem;
+}
+.searchBody .table .string > * {
+  margin-left: 2.5rem;
+  height: -moz-min-content;
+  height: min-content;
+}
+.searchBody .table .string .Y {
+  margin-left: 5rem;
+}
+.searchBody .table > *:nth-child(odd) {
+  background: #EBDCFA;
+}
+.searchBody .cont {
+  position: relative;
+  width: 50%;
+}
+
+.profile {
+  color: #9747FF;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.profile .title {
+  font-size: 2rem;
+  font-weight: 600;
+  line-height: 2.4375rem;
+  text-align: center;
+}
+.profile .profileForm {
+  width: -moz-min-content;
+  width: min-content;
+  margin: auto;
+}
+.profile .profileForm input {
+  border: 1px solid #EBDCFA;
+  border-radius: 10px;
+  padding: 0.3125rem 0.625rem;
+}
+.profile .profileForm input:focus {
+  outline: 1px solid #9747FF;
+}
+
+.ratingBody {
+  position: relative;
+  display: flex;
+  flex-direction: row;
+}
+.ratingBody .cont {
+  position: relative;
+  width: 50%;
+}
+.ratingBody .cont .drop {
+  width: 40%;
+  right: 1.25rem;
+}/*# sourceMappingURL=sass.css.map */
