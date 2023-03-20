@@ -1,15 +1,13 @@
-import star from '../resourses/Star 1.svg'
-import plus from '../resourses/Add.svg'
+import star from '../resourses/Star 1 (1).svg'
+import plus from '../resourses/Add (1).svg'
 import { useState } from 'react';
 export default function DAD({ drag,text,f=null}){
     const [cls, setCls]=useState({})
     return (<div className='drop' style={{cls}} onDragEnter={()=>{
-        setCls({
-        opacity: 0.7}
-        )
-      
-        const l=f==null?drag.target.getAttribute('data-key'):'s'+drag.target.getAttribute('data-key');
-        sessionStorage.setItem([l],JSON.stringify({[l]:(drag.target.outerHTML)}))
+        
+        
+        const l=f==null?drag.getAttribute('data-key'):'s'+drag.getAttribute('data-key');
+        sessionStorage.setItem([l],JSON.stringify({[l]:(drag.outerHTML)}))
        
     }} onDragLeave={()=>{setCls('')}
         }> 

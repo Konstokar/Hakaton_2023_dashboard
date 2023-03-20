@@ -1,7 +1,10 @@
+import { useState } from "react";
 import { Link } from "react-router-dom";
 
 export default function Menu(){
-    return( <div className="menu">
+    const [theme,sTheme]=useState(localStorage.getItem('theme'))  
+
+      return( <div className={theme=='n'?"menu": "lmenu"}>
         <nav  className="submenu">
             <Link to="/app/search" >Претенденты</Link>
             <Link to="/app/favorites"  >Избранные</Link>

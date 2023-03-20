@@ -1,25 +1,46 @@
 .regtitle
-    text-align: center
-    color: $color-violet
-    font-size: 2rem
-
-.reg
-    display: flex
-    width: min-content
     margin: auto
-    color: $color-violet
-    flex-direction: column
+    width: 9.375rem
+.underreg
+    text-decoration: none
+    color: white
+    text-align: center
+    font-size: 0.5rem
+.bg
     
-    & .submit
-        width: 20rem
-        background: $color-light-violet
+    background: $grey
+    display: flex
+    flex-direction: column
+    justify-content: center
+    padding: 5rem 0 31.25rem 0
+.reg
+    
+    display: flex
+    width: max-content
+    padding: 1rem 2rem 2rem 2rem
+    margin: auto
+    margin-top: 1.875rem
+    background-color: $gr
+    flex-direction: column
+    color: white
+    & label
+        display: flex
         
     & input
         width: 100%
-        border: 1px solid $color-light-violet
-        border-radius: 10px
+        border: 0
+        border-bottom: 1px solid white
+        background-color: $gr
         padding: .3125rem .625rem
-        &:focus
-            outline: 1px solid $color-violet
+        margin-left: 5px
+    & .submit
+        color: white
+        margin: auto
+        margin-top: 3.125rem
+        width: min-content
+        background: $blue
+        border: 0
+        
+           
     &>*
         margin-top: 1rem

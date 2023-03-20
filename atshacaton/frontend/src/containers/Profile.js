@@ -6,15 +6,16 @@ export default function Profile()
             <p>Имя</p><input type = 'text' name=""/>
             <p>Фамилия</p><input type = 'text' name=""/>
             <p>Отчество</p><input type = 'text' name=""/>
-            <p>Возраст</p><input type = 'number' min = '18' max = '100' name=""/>
+            <p>Профессия</p> <datalist id = 'prof' name="">
+
+</datalist>
+          
             <p>ВУЗ</p><input list="vuz" name=""/>
-            <datalist id = 'vuz' name="">
+            <p>Образование</p><datalist id = 'vuz' name="">
 
             </datalist>
-            <p>Профессия</p><input list="prof" name=""/>
-            <datalist id = 'prof' name="">
-
-            </datalist>
+           
+           
             <p>Стаж</p><input type = 'number' min = '0' max = '100' name=""/>
         </form>
     </div>)
