@@ -26,31 +26,55 @@ body {
 }
 
 .regtitle {
+  margin: auto;
+  width: 9.375rem;
+}
+
+.underreg {
+  text-decoration: none;
+  color: white;
   text-align: center;
-  color: #9747FF;
-  font-size: 2rem;
+  font-size: 0.5rem;
+}
+
+.bg {
+  background: #3C3C3C;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 5rem 0 31.25rem 0;
 }
 
 .reg {
   display: flex;
-  width: -moz-min-content;
-  width: min-content;
+  width: -moz-max-content;
+  width: max-content;
+  padding: 1rem 2rem 2rem 2rem;
   margin: auto;
-  color: #9747FF;
+  margin-top: 1.875rem;
+  background-color: #2e2e2e;
   flex-direction: column;
+  color: white;
 }
-.reg .submit {
-  width: 20rem;
-  background: #EBDCFA;
+.reg label {
+  display: flex;
 }
 .reg input {
   width: 100%;
-  border: 1px solid #EBDCFA;
-  border-radius: 10px;
+  border: 0;
+  border-bottom: 1px solid white;
+  background-color: #2e2e2e;
   padding: 0.3125rem 0.625rem;
+  margin-left: 5px;
 }
-.reg input:focus {
-  outline: 1px solid #9747FF;
+.reg .submit {
+  color: white;
+  margin: auto;
+  margin-top: 3.125rem;
+  width: -moz-min-content;
+  width: min-content;
+  background: #2C2F89;
+  border: 0;
 }
 .reg > * {
   margin-top: 1rem;
@@ -58,6 +82,7 @@ body {
 
 .drop {
   display: flex;
+  color: white;
   position: fixed;
   flex-direction: column;
   align-content: center;
@@ -65,25 +90,9 @@ body {
   flex-wrap: wrap;
   height: -moz-min-content;
   height: min-content;
-  background: linear-gradient(215.89deg, #D6D6D6 4.52%, rgba(214, 214, 214, 0) 94.57%);
-  border-radius: 34.5px;
+  background: radial-gradient(50.08% 43.55% at 50.08% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%);
+  border-radius: 31px;
   font-size: 2.7813rem;
-}
-@media (min-width: 1440px) {
-  .drop {
-    width: 40%;
-    padding: 6rem 5rem;
-    margin-top: 1rem;
-    margin-left: 2.5rem;
-  }
-}
-@media (min-width: 1024px) {
-  .drop {
-    width: 30%;
-    padding: 4rem 5rem;
-    margin-top: 1rem;
-    margin-left: 2rem;
-  }
 }
 @media (min-width: 768px) {
   .drop {
@@ -91,7 +100,23 @@ body {
     width: 30%;
     padding: 5rem 5rem;
     margin-top: 1rem;
-    margin-left: 2rem;
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 1024px) {
+  .drop {
+    width: 30%;
+    padding: 4rem 5rem;
+    margin-top: 1rem;
+    margin-left: 3rem;
+  }
+}
+@media (min-width: 1440px) {
+  .drop {
+    width: 40%;
+    padding: 6rem 5rem;
+    margin-top: 1rem;
+    margin-left: 4rem;
   }
 }
 .drop .mean {
@@ -110,18 +135,18 @@ body {
 
 .menu {
   display: flex;
-  background: #9747FF;
-  padding: 1.875rem 70px;
+  background: #2C2F89;
   flex-direction: row;
 }
 .menu a {
-  color: black;
-  font-size: 2rem;
-  font-weight: 600;
+  color: white;
+  font-size: 1.625rem;
+  font-weight: 400;
   text-decoration: none;
+  padding: 2.0625rem 2.8125rem;
 }
 .menu a:hover {
-  color: white;
+  background: #232551;
 }
 .menu nav {
   display: flex;
@@ -149,20 +174,30 @@ body {
 
 .sort {
   width: 100%;
-  background: #131213;
 }
 .sort .sortbody {
+  text-transform: uppercase;
   color: white;
   display: flex;
-  width: 70%;
+  width: 100%;
+}
+.sort .sortbody div img {
+  width: 0.9375rem;
 }
 .sort .sortbody .s1 {
-  margin-left: 19rem;
+  background: #232551;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1rem;
+  width: 60%;
 }
 .sort .sortbody .s2 {
-  margin-left: 8rem;
+  margin: auto;
+  margin-left: 2rem;
 }
 .sort .sortbody .s3 {
+  margin: auto;
   margin-left: 2rem;
 }
 .sort .sortbody > * {
@@ -180,27 +215,38 @@ body {
   flex-direction: row;
   position: relative;
   padding: 0 1.25rem;
+  background: #3C3C3C;
+  height: 1000000px;
 }
 .searchBody .table {
   position: relative;
   width: 60%;
 }
-@media (min-width: 1024px) {
-  .searchBody .table {
-    width: 80%;
-  }
-}
 @media (min-width: 768px) {
   .searchBody .table {
-    width: 90%;
+    width: 60%;
+  }
+}
+@media (min-width: 1024px) {
+  .searchBody .table {
+    width: 60%;
   }
 }
 .searchBody .table .string {
+  padding: 0.3125rem 0;
+  color: white;
+  text-transform: uppercase;
   display: flex;
   position: relative;
   flex-direction: row;
   align-items: center;
   font-size: 1.4063rem;
+}
+.searchBody .table .string:nth-child(odd) {
+  background: #2C2F89;
+}
+.searchBody .table .string:nth-child(even) {
+  background: #232551;
 }
 .searchBody .table .string .del {
   font-size: 1.25rem;
@@ -215,16 +261,13 @@ body {
 .searchBody .table .string .Y {
   margin-left: 5rem;
 }
-.searchBody .table > *:nth-child(odd) {
-  background: #EBDCFA;
-}
 .searchBody .cont {
   position: relative;
   width: 50%;
 }
 
 .profile {
-  color: #9747FF;
+  color: #2C2F89;
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -246,11 +289,62 @@ body {
   padding: 0.3125rem 0.625rem;
 }
 .profile .profileForm input:focus {
-  outline: 1px solid #9747FF;
+  outline: 1px solid #2C2F89;
+}
+
+.info {
+  color: white;
+  padding: 2rem 1.25rem;
+  width: 80%;
+  margin-left: 3.125rem;
+}
+.info .ava {
+  display: flex;
+  justify-content: center;
+}
+.info .ava img {
+  width: 5rem;
+  margin: auto;
+}
+.info .topFio {
+  border-bottom: 1px solid white;
+  text-align: center;
+  font-size: 2rem;
+}
+
+.cont {
+  margin-left: auto;
 }
 
 .ratingBody {
   position: relative;
+  display: flex;
+  flex-direction: row;
+  background: #3C3C3C;
+  padding-top: 20px;
+}
+.ratingBody .RBB .table {
+  position: relative;
+  margin-top: 1rem;
+}
+.ratingBody .RBB .table .string {
+  padding: 0.3125rem 0;
+  color: white;
+  display: flex;
+  justify-content: space-evenly;
+  text-transform: uppercase;
+}
+.ratingBody .RBB .table .string:nth-child(odd) {
+  background: #2C2F89;
+}
+.ratingBody .RBB .table .string:nth-child(even) {
+  background: #232551;
+}
+.ratingBody .cont {
+  position: relative;
+  width: 50%;
+}
+.ratingBody .rB {
   display: flex;
   flex-direction: row;
 }
@@ -261,4 +355,23 @@ body {
 .ratingBody .cont .drop {
   width: 40%;
   right: 1.25rem;
+}
+
+.top {
+  background: #232551;
+  color: white;
+  padding: 2rem 1.25rem;
+  margin-left: 3.125rem;
+}
+.top .ava {
+  display: flex;
+  justify-content: center;
+}
+.top .ava img {
+  width: 3.75rem;
+  margin: auto;
+}
+.top .topFio {
+  border-bottom: 1px solid white;
+  text-align: center;
 }/*# sourceMappingURL=sass.css.map */

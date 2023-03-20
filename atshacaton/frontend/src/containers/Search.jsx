@@ -2,41 +2,38 @@ import Menu from './Menulayout'
 import  $ from 'jquery'
 import ava from '../resourses/Avatar_Applicant.svg'
 import DAD from './DAD.jsx'
-import Sort from './Sort'
+import React from 'react';
+import Table from './Table.jsx'
+
 
 import { useState } from 'react';
 
-function Search() {
-
-    
+function Search({drops,setDrops}) {
+    const [cc,sC]=useState(0)
+    const test=[1,2,3,4,5,6,7,8,9]
     const [drag,setDrag]=useState(null)
-    const [element,setElement]=useState(elems(20));
-    function elems(c){
-        let arr=[];
-        
-        for(let i=0;i<c;i++){
-            arr.push(<div className="string" key={i+1} draggable="true" onDragStart={(e)=>{    
-                setDrag(e);
-                console.log(e,element)
-            }} 
-                onDragEnd={(e)=>{
-            }
-            }
-                >
-                    <img  draggable="false" src={ava} alt="" />
-                    <p>ИМЯ ФАМИЛИЯ ОТЧЕСТВО</p>
-                    <p className="R">{i}</p>
-                    <p className="Y">Есть</p>
-                </div>)
-        }
-        return arr
+    const [element,setElement]=useState(test.map((el,i)=>{ 
+        const key=i
+        return(
+        <div className="string" data-key={key} key={key} draggable="true" onDragStart={(e)=>{
+            const b=drops;
+            setDrag(e.target)
+            b[key]=(e.target)
+            setDrops(b)}}
+           >
+            <p>ИМЯ ФАМИЛИЯ ОТЧЕСТВО</p>
+                <p className="R">{i}</p>
+                <p className="Y">Есть</p>
+            </div>)
     }
+    ))
+    
+   
+
+  
     return (<>
-        <Sort />
     <div className='searchBody'>
-        <div className="table">
-            {element}
-        </div>
+        <Table element={element}/>
         <div className='cont'>
             <DAD  drag={drag}  text="Избранное"/>
         </div>

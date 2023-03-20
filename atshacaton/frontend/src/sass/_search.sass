@@ -3,14 +3,25 @@
     flex-direction: row
     position: relative
     padding: 0 1.25rem
+    background: $grey
+    height: 1000000px
     & .table
         position: relative
-        width:60%
-        @include media(1024)
-            width: 80%
+        width: 60%
         @include media(768)
-            width: 90%
+            width: 60%
+        @include media(1024)
+            width: 60%
+        
         & .string
+            padding: .3125rem 0
+            color: white
+            text-transform: uppercase
+            &:nth-child(odd)
+                background: $blue
+            &:nth-child(even)
+                background: $marker
+                
             & .del
                 font-size: 1.25rem
                 font-weight: 600
@@ -25,8 +36,8 @@
                 height: min-content
             & .Y
                 margin-left: 5rem
-        &>*:nth-child(odd)
-            background: $color-light-violet
+      
+          
             
                 
                 

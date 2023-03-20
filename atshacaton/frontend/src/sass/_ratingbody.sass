@@ -2,6 +2,33 @@
     position: relative
     display: flex
     flex-direction: row
+    background: $grey
+    padding-top: 20px
+    & .RBB
+        
+        & .table
+            position: relative
+            margin-top: 1rem
+            & .string
+                padding: .3125rem 0
+                color: white
+                display: flex
+                justify-content: space-evenly
+                text-transform: uppercase
+                &:nth-child(odd)
+                    background: $blue
+                &:nth-child(even)
+                    background: $marker             
+                
+    & .cont
+        position: relative
+        width: 50%
+    
+    
+
+    & .rB
+        display: flex
+        flex-direction: row
     & .cont
         position: relative
         width: 50%

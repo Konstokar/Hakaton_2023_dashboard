@@ -13,14 +13,18 @@ import Search from './containers/Search'
 import { useState } from 'react';
 function App() {
   const [favors, setFavors]=useState([])
+  const [drops,setDrops]=useState({});
+  if(localStorage.getItem('theme')==null)
+    {localStorage.setItem('theme','n')}
   return (
     <BrowserRouter>
     <Routes>
       <Route path="/" >
         <Route path="reg" element={<Reg />}/>
+        <Route path="log" element={<Login />}/>
         <Route path="app/" element={<Menulayout />}>
           <Route path="profile" element={<Profile />}/>
-          <Route path="search" element={<Search />}/>
+          <Route path="search" element={<Search drops={drops} setDrops={setDrops}/>}/>
           <Route path="favorites" element={<Favorites />}/>
           <Route path="rating" element={<Rating />}/>
             
