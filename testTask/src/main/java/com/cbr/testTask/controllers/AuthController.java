@@ -1,6 +1,6 @@
 package com.cbr.testTask.controllers;
 
-import com.cbr.testTask.db.Alinke.UsersEntity;
+import com.cbr.testTask.db.UsersEntity;
 import com.cbr.testTask.dtos.PersonDTO;
 import com.cbr.testTask.services.RegistrationService;
 import com.cbr.testTask.util.PersonNotRegisteredException;
@@ -66,6 +66,8 @@ public class AuthController {
 
         UsersEntity person = convertToPerson(personDTO);
 
+        System.out.println(personDTO.getUsername());
+
         personValidator.validate(person, bindingResult);
 
         if (bindingResult.hasErrors()){
@@ -81,6 +83,8 @@ public class AuthController {
         }
 
         registrationService.register(person);
+
+
 
         return ResponseEntity.ok(HttpStatus.OK);
     }

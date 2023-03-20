@@ -16,9 +16,9 @@ spring:
 
   datasource:
     driver-class-name: org.postgresql.Driver
-    url: jdbc:postgresql://localhost:5432/dashboard
+    url: jdbc:postgresql://localhost:1337/dashboard2
     username: postgres
-    password: 1234
+    password: root
   liquibase:
     change-log: classpath:db/changelog/db.changelog-master.xml
     drop-first: false

@@ -1,6 +1,6 @@
 package com.cbr.testTask.security;
 
-import com.cbr.testTask.db.Alinke.UsersEntity;
+import com.cbr.testTask.db.UsersEntity;
 import org.springframework.security.core.GrantedAuthority;
 import org.springframework.security.core.userdetails.UserDetails;
 

@@ -1,7 +1,7 @@
 package com.cbr.testTask.services;
 
-import com.cbr.testTask.db.Alinke.UsersEntity;
-import com.cbr.testTask.repo.CandidateRepositories;
+import com.cbr.testTask.db.UsersEntity;
+import com.cbr.testTask.repo.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
@@ -10,11 +10,11 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Service
 public class RegistrationService {
-    private final CandidateRepositories peopleRepositories;
+    private final UserRepository peopleRepositories;
     private final PasswordEncoder passwordEncoder;
 
     @Autowired
-    public RegistrationService(CandidateRepositories peopleRepositories, PasswordEncoder passwordEncoder) {
+    public RegistrationService(UserRepository peopleRepositories, PasswordEncoder passwordEncoder) {
         this.peopleRepositories = peopleRepositories;
         this.passwordEncoder = passwordEncoder;
     }

@@ -1,48 +1,33 @@
 package com.cbr.testTask.services;
 
-import com.cbr.testTask.db.Alinke.UsersEntity;
-import com.cbr.testTask.repo.CandidateRepositories;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.cbr.testTask.db.AdditionalCompetitionEntity;
+import com.cbr.testTask.db.CandidateToAdditionalCompetitionEntity;
+import com.cbr.testTask.db.CandidatesEntity;
+import com.cbr.testTask.db.SkillsEntity;
+import com.cbr.testTask.repo.CandidateRepository;
+import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;
-import org.springframework.transaction.annotation.Transactional;
 
 import java.util.List;
-import java.util.Optional;
+import java.util.stream.Collectors;
 
 @Service
-@Transactional(readOnly = true)
+@RequiredArgsConstructor
 public class CandidateService {
-    private final CandidateRepositories candidateRepositories;
+    private final CandidateRepository candidateRepository;
 
-    @Autowired
-    public CandidateService(CandidateRepositories candidateRepositories) {
-        this.candidateRepositories = candidateRepositories;
+    public List<CandidatesEntity> findByCompetitionId(long id){
+        return candidateRepository.findAll().stream()
+                .filter(candidatesEntity -> {
+                    for (CandidateToAdditionalCompetitionEntity ace : candidatesEntity.getAdditionalCompetitionId()){
+                        if (ace.getAdditionalId().getId() == id)
+                            return true;
+                    }
+                    return false;
+                }).collect(Collectors.toList());
     }
 
-    public List<UsersEntity> findAll(){
-        return candidateRepositories.findAll();
-    }
-    public UsersEntity findOne(int id){
-        return candidateRepositories.findById(id).orElse(null);
-    }
-
-    @Transactional
-    public void save(UsersEntity person){
-        candidateRepositories.save(person);
-    }
-
-    @Transactional
-    public void update(Long id, UsersEntity updatePerson){
-        updatePerson.setId(id);
-        candidateRepositories.save(updatePerson);
-    }
-
-    @Transactional
-    public void delete(int id){
-        candidateRepositories.deleteById(id);
-    }
-
-    public Optional<UsersEntity> getPersonByUsername(String username){
-        return candidateRepositories.findByUsername(username);
+    public void create(CandidatesEntity candidates){
+        candidateRepository.save(candidates);
     }
 }

@@ -1,7 +1,6 @@
 package com.cbr.testTask.services;
 
-import com.cbr.testTask.db.Alinke.AdditionalCompetitionEntity;
-import com.cbr.testTask.db.Alinke.UsersEntity;
+import com.cbr.testTask.db.AdditionalCompetitionEntity;
 import com.cbr.testTask.repo.AdditionalCompetitionRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

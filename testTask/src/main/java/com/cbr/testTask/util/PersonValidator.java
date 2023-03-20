@@ -1,6 +1,6 @@
 package com.cbr.testTask.util;
 
-import com.cbr.testTask.db.Alinke.UsersEntity;
+import com.cbr.testTask.db.UsersEntity;
 import com.cbr.testTask.services.PersonDetailsService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UsernameNotFoundException;

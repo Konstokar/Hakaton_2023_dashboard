@@ -1,8 +1,6 @@
 package com.cbr.testTask.controllers;
 
-import com.cbr.testTask.db.Alinke.AdditionalCompetitionEntity;
-import com.cbr.testTask.db.Alinke.ProfessionEntity;
-import com.cbr.testTask.db.Alinke.UsersEntity;
+import com.cbr.testTask.db.AdditionalCompetitionEntity;
 import com.cbr.testTask.services.AdditionalCompetitionService;
 import jakarta.validation.Valid;
 import org.modelmapper.ModelMapper;
@@ -49,7 +47,7 @@ public class AdditionalCompetitionController {
         return ResponseEntity.ok(HttpStatus.OK);
     }
 
-    @PostMapping("/{id}")
+    @PostMapping()
     public ResponseEntity<HttpStatus> save(@Valid @RequestBody AdditionalCompetitionEntity additionalCompetition){
         additionalCompetitionService.save(additionalCompetition);
         return ResponseEntity.ok(HttpStatus.OK);

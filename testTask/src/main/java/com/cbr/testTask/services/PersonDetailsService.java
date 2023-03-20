@@ -1,7 +1,7 @@
 package com.cbr.testTask.services;
 
-import com.cbr.testTask.db.Alinke.UsersEntity;
-import com.cbr.testTask.repo.CandidateRepositories;
+import com.cbr.testTask.db.UsersEntity;
+import com.cbr.testTask.repo.UserRepository;
 import com.cbr.testTask.security.PersonDetails;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.core.userdetails.UserDetails;
@@ -13,10 +13,10 @@ import java.util.Optional;
 
 @Service
 public class PersonDetailsService implements UserDetailsService {
-    private final CandidateRepositories peopleRepository;
+    private final UserRepository peopleRepository;
 
     @Autowired
-    public PersonDetailsService(CandidateRepositories peopleRepository) {
+    public PersonDetailsService(UserRepository peopleRepository) {
         this.peopleRepository = peopleRepository;
     }
 
